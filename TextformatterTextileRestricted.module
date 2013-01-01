@@ -31,7 +31,7 @@ class TextformatterTextileRestricted extends Textformatter {
 		return array(
 			'title' => 'Textile Restricted',
 			'summary' => 'Same as the Textile module except that this restricted version may be used with untrusted input too (like user-supplied input, blog comments, etc.).',
-			'version' => 250,
+			'version' => 251,
 			'url' => "http://en.wikipedia.org/wiki/Textile_(markup_language)", 
 		); 
 	}
