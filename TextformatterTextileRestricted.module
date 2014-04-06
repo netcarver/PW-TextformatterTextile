@@ -27,20 +27,21 @@
 
 class TextformatterTextileRestricted extends Textformatter {
 
-	public static function getModuleInfo() {
-		return array(
-			'title' => 'Textile Restricted',
-			'summary' => 'Same as the Textile module except that this restricted version may be used with untrusted input too (like user-supplied input, blog comments, etc.).',
-			'version' => 355,
-			'url' => "http://en.wikipedia.org/wiki/Textile_(markup_language)",
-		); 
-	}
+    public static function getModuleInfo() {
+        return array(
+            'title' => 'Textile Restricted',
+            'summary' => 'Same as the Textile module except that this restricted version may be used with untrusted input too (like user-supplied input, blog comments, etc.).',
+            'version' => 355,
+            'url' => "http://en.wikipedia.org/wiki/Textile_(markup_language)",
+            'requires' => 'PHP>=5.3.0',
+        );
+    }
 
-	public function format(&$str) {
-		require_once($this->config->paths->TextformatterTextileRestricted . 'src/Parser.php');
-		require_once($this->config->paths->TextformatterTextileRestricted . 'src/DataBag.php');
-		require_once($this->config->paths->TextformatterTextileRestricted . 'src/Tag.php');
-		$textile = new \Netcarver\Textile\Parser('html5');
-		$str = $textile->TextileRestricted($str); 
-	}
+    public function format(&$str) {
+        require_once($this->config->paths->TextformatterTextileRestricted . 'src/Parser.php');
+        require_once($this->config->paths->TextformatterTextileRestricted . 'src/DataBag.php');
+        require_once($this->config->paths->TextformatterTextileRestricted . 'src/Tag.php');
+        $textile = new \Netcarver\Textile\Parser('html5');
+        $str = $textile->TextileRestricted($str);
+    }
 }
