@@ -23,13 +23,13 @@
  *
  */
 
-class TextformatterTextile extends Textformatter {
+class TextformatterTextileField extends Textformatter {
 
 	public static function getModuleInfo() {
 		return array(
 			'title' => 'Textile', 
 			'version' => 355,
-			'summary' => "Textile text formatting from Textpattern by Dean Allen with additions by Alex Shiels. For use with trusted input only.", 
+			'summary' => "Textile text formatting from Textpattern by Dean Allen with additions by Alex Shiels. For use with single-line trusted input only.", 
 			'url' => "http://en.wikipedia.org/wiki/Textile_(markup_language)",
 		); 
 	}
@@ -39,6 +39,6 @@ class TextformatterTextile extends Textformatter {
 		require_once($this->config->paths->TextformatterTextile . '/textile/DataBag.php');
 		require_once($this->config->paths->TextformatterTextile . '/textile/Tag.php');
 		$textile = new Textile();
-		$str = $textile->TextileThis($str);
+		$str = $textile->TextileField($str);
 	}
 }

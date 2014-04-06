@@ -19,7 +19,7 @@
  * Textile's procedural code into a class framework
  * Additions and fixes Copyright (c) 2006    Alex Shiels       http://thresholdstate.com/
  * Additions and fixes Copyright (c) 2010    Stef Dawson       http://stefdawson.com/
- * Additions and fixes Copyright (c) 2010-12 Netcarver         http://github.com/netcarver
+ * Additions and fixes Copyright (c) 2010-14 Netcarver         http://github.com/netcarver
  * Additions and fixes Copyright (c) 2011    Jeff Soo          http://ipsedixit.net
  * Additions and fixes Copyright (c) 2012    Robert Wetzlmayr  http://wetzlmayr.com/
  *
@@ -31,13 +31,15 @@ class TextformatterTextileRestricted extends Textformatter {
 		return array(
 			'title' => 'Textile Restricted',
 			'summary' => 'Same as the Textile module except that this restricted version may be used with untrusted input too (like user-supplied input, blog comments, etc.).',
-			'version' => 251,
-			'url' => "http://en.wikipedia.org/wiki/Textile_(markup_language)", 
+			'version' => 355,
+			'url' => "http://en.wikipedia.org/wiki/Textile_(markup_language)",
 		); 
 	}
 
 	public function format(&$str) {
-		require_once($this->config->paths->TextformatterTextile . 'classTextile.php'); 
+		require_once($this->config->paths->TextformatterTextile . '/textile/Parser.php');
+		require_once($this->config->paths->TextformatterTextile . '/textile/DataBag.php');
+		require_once($this->config->paths->TextformatterTextile . '/textile/Tag.php');
 		$textile = new Textile();
 		$str = $textile->TextileRestricted($str); 
 	}

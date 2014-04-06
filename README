@@ -1,7 +1,8 @@
 ProcessWire Textile Textformatter module for ProcessWire 2.2+
 
-Included are versions for trusted input (TextformatterTextile) and 
-for user-supplied input (TextformatterTextileRestricted).
+Included are versions for multi-line trusted input (TextformatterTextile), 
+for user-supplied multi-line input (TextformatterTextileRestricted) and for single-line, trusted, fields
+(TextformatterTextileField.)
 
-To install, place these files into /site/modules/TextformatterTextile/. 
+To install, copy these files (including subdirs) into /site/modules/TextformatterTextile/.
 
