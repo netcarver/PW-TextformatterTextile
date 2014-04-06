@@ -1,8 +1,25 @@
 ProcessWire Textile Textformatter module for ProcessWire 2.2+
 
-Included are versions for multi-line trusted input (TextformatterTextile), 
-for user-supplied multi-line input (TextformatterTextileRestricted) and for single-line, trusted, fields
-(TextformatterTextileField.)
 
 To install, copy these files (including subdirs) into /site/modules/TextformatterTextile/.
 
+There are three formatters supplied by this module...
+
+TextformatterTextile
+--------------------
+
+This provides a textile formatter for multiple paragraph fields from trusted input (such as fields filled in by your
+site owner.) It provides full textile support including links, lists, tables, spans, glyphs, footnotes etc.
+
+
+TextformatterTextileField
+-------------------------
+
+This provides a really lightweight text formatter for single line fields from trusted sources. It only provides span
+and glyph parsing.
+
+
+TextformatterTextileRestricted
+------------------------------
+
+Should be used for fields that come from untrusted sources (such as site visitors.)

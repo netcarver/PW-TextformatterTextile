@@ -37,10 +37,10 @@ class TextformatterTextileRestricted extends Textformatter {
 	}
 
 	public function format(&$str) {
-		require_once($this->config->paths->TextformatterTextile . '/textile/Parser.php');
-		require_once($this->config->paths->TextformatterTextile . '/textile/DataBag.php');
-		require_once($this->config->paths->TextformatterTextile . '/textile/Tag.php');
-		$textile = new Textile();
+		require_once($this->config->paths->TextformatterTextileRestricted . 'src/Parser.php');
+		require_once($this->config->paths->TextformatterTextileRestricted . 'src/DataBag.php');
+		require_once($this->config->paths->TextformatterTextileRestricted . 'src/Tag.php');
+		$textile = new \Netcarver\Textile\Parser('html5');
 		$str = $textile->TextileRestricted($str); 
 	}
 }

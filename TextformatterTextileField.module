@@ -27,7 +27,7 @@ class TextformatterTextileField extends Textformatter {
 
 	public static function getModuleInfo() {
 		return array(
-			'title' => 'Textile', 
+			'title' => 'Textile Field',
 			'version' => 355,
 			'summary' => "Textile text formatting from Textpattern by Dean Allen with additions by Alex Shiels. For use with single-line trusted input only.", 
 			'url' => "http://en.wikipedia.org/wiki/Textile_(markup_language)",
@@ -35,10 +35,10 @@ class TextformatterTextileField extends Textformatter {
 	}
 
 	public function format(&$str) {
-		require_once($this->config->paths->TextformatterTextile . '/textile/Parser.php');
-		require_once($this->config->paths->TextformatterTextile . '/textile/DataBag.php');
-		require_once($this->config->paths->TextformatterTextile . '/textile/Tag.php');
-		$textile = new Textile();
+		require_once($this->config->paths->TextformatterTextileField . 'src/Parser.php');
+		require_once($this->config->paths->TextformatterTextileField . 'src/DataBag.php');
+		require_once($this->config->paths->TextformatterTextileField . 'src/Tag.php');
+		$textile = new \Netcarver\Textile\Parser('html5');
 		$str = $textile->TextileField($str);
 	}
 }
