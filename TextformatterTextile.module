@@ -32,6 +32,7 @@ class TextformatterTextile extends Textformatter {
             'summary' => "Textile text formatting from Textpattern by Dean Allen with additions by Alex Shiels. For use with trusted input only.",
             'url' => "http://en.wikipedia.org/wiki/Textile_(markup_language)",
             'requires' => 'PHP>=5.3.0',
+        );
     }
 
     public function format(&$str) {
