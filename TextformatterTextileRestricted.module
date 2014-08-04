@@ -33,7 +33,7 @@ class TextformatterTextileRestricted extends Textformatter {
             'summary' => 'Same as the Textile module except that this restricted version may be used with untrusted input too (like user-supplied input, blog comments, etc.).',
             'version' => 355,
             'url' => "http://en.wikipedia.org/wiki/Textile_(markup_language)",
-            'requires' => 'PHP>=5.3.0',
+            //'requires' => 'PHP>=5.3.0',  // Will add back at later date once the requires entry is in PW master
         );
     }
 
